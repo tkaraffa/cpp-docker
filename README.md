@@ -4,7 +4,7 @@ Very basic demo of containerizing a C++ program.
 
 ## Usage
 
-1. Install Docker (or Docker Desktop)
+1. [Install Docker for your OS](https://docs.docker.com/get-docker/).
 
 2. Run `docker build . --tag=cmake --file=dockerfiles/Dockerfile.cmake`
 
@@ -12,6 +12,6 @@ Very basic demo of containerizing a C++ program.
 
 3. Run `docker build . --tag=cpp-docker`
 
-* This builds the `cpp-docker` image, which will include our compiled build.
+* This builds the `cpp-docker` image, based on the previously created `cmake` image, which will include our compiled build.
 
-4. Run `docker run cpp-docker <arguments>` to execute the code in `src/hello.cpp`.
+4. Run `docker run cpp-docker [<arguments>]...` to execute the code in `src/hello.cpp`.
